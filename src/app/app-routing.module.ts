@@ -10,7 +10,7 @@ import {AdminLayoutComponent} from './layout/admin-layout/admin-layout.component
 const routes: Routes = [
   {path: '', component: MainLayoutComponent, children: [
       {path: '', component: HomeComponent},
-      {path: 'hakkimizda', component: AboutMeComponent},
+      {path: 'hakkimda', component: AboutMeComponent},
       {path: 'iletisim', component: ContactComponent}
     ]},
   {path: 'admin', component: AdminLayoutComponent}
