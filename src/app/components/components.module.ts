@@ -21,7 +21,8 @@ import { ArticlesComponent } from './articles/articles.component';
   ],
   exports: [
     MenuCategoryComponent,
-    PageTitleComponent
+    PageTitleComponent,
+    ArticlesComponent
   ]
 })
 export class ComponentsModule { }
