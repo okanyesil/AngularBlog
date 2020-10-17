@@ -16,7 +16,8 @@ import { PageTitleComponent } from './page-title/page-title.component';
     RouterModule
   ],
   exports: [
-    MenuCategoryComponent
+    MenuCategoryComponent,
+    PageTitleComponent
   ]
 })
 export class ComponentsModule { }
