@@ -11,7 +11,8 @@ const routes: Routes = [
   {path: '', component: MainLayoutComponent, children: [
       {path: '', component: HomeComponent},
       {path: 'hakkimda', component: AboutMeComponent},
-      {path: 'iletisim', component: ContactComponent}
+      {path: 'iletisim', component: ContactComponent},
+      {path: 'sayfa/:page', component: HomeComponent}
     ]},
   {path: 'admin', component: AdminLayoutComponent}
 ];

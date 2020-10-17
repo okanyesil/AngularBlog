@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+import {ArticlePg} from '../models/article-pg';
+import {tap} from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +12,9 @@ export class ArticleService {
   constructor(private http: HttpClient) { }
   getArticles(page: number, pageSize = 5) {
     const api = `${this.apiUrl}/${page}/${pageSize}`;
-    return this.http.get(api);
+    return this.http.get<ArticlePg>(api).pipe(tap(value => {
+      this.loading = false;
+    }));
   }
 
 
